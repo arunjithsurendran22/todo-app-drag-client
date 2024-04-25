@@ -68,19 +68,19 @@ function UserLogin() {
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-gray-900">
-      <div className="max-w-xl w-3/12 mx-auto p-8 rounded-lg bg-gray-800 shadow-lg">
-        <h1 className="font-bold text-3xl  text-cyan-600 text-center mt-8 italic">
+      <div className="max-w-md w-full mx-4 p-8 rounded-lg bg-gray-800 shadow-lg">
+        <h1 className="font-bold text-xl md:text-3xl text-cyan-600 text-center mt-8 italic">
           LOGIN
         </h1>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 h-80">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-8">
           <input
             ref={inputFocus}
             type="email"
             id="email"
             placeholder="Email"
-            className={`bg-gray-700 text-gray-100 p-4 rounded-lg shadow-inner mt-20 focus:outline-none ${
+            className={`bg-gray-700 text-gray-100 px-4 py-2 md:py-4 rounded-lg shadow-inner focus:outline-none ${
               errors.email && "border-red-500"
-            }`}
+            } sm:text-sm md:text-base`}
             onChange={handleChange}
           />
           {errors.email && <span className="text-red-500">{errors.email}</span>}
@@ -88,9 +88,9 @@ function UserLogin() {
             type="password"
             id="password"
             placeholder="Password"
-            className={`bg-gray-700 text-gray-100 p-4 rounded-lg shadow-inner focus:outline-none ${
+            className={`bg-gray-700 text-gray-100 px-4 py-2 md:py-4 rounded-lg shadow-inner focus:outline-none ${
               errors.password && "border-red-500"
-            }`}
+            } sm:text-sm md:text-base`}
             onChange={handleChange}
           />
           {errors.password && (
@@ -98,15 +98,15 @@ function UserLogin() {
           )}
           <button
             type="submit"
-            className="bg-indigo-600 text-white p-4 rounded-lg shadow-md hover:bg-indigo-900 focus:outline-none mt-4 font-bold"
+            className="bg-indigo-600 text-white px-4 py-2 md:py-4 rounded-lg shadow-md hover:bg-indigo-900 focus:outline-none mt-4 font-bold sm:text-sm md:text-base"
           >
             LOGIN
           </button>
         </form>
         <div className="text-center mt-4">
-          <span className="text-gray-300 italic">Don't have an Account ?</span>
+          <span className="text-gray-300 italic text-xs md:text-sm">Don't have an Account ?</span>
           <Link to="/register">
-            <span className="text-blue-400 mx-2 font-bold">Register</span>
+            <span className="text-blue-400 mx-2 font-bold text-xs md:text-sm">Register</span>
           </Link>
         </div>
       </div>

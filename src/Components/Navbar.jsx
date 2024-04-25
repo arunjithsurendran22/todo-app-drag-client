@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex items-center">
-            <h1 className="text-white font-semibold text-lg">TODO APP</h1>
+            <h1 className="text-white font-semibold md:text-lg">TODO APP</h1>
           </div>
           <div className="flex items-center">
             <span className="text-white mr-4">{userName}</span>

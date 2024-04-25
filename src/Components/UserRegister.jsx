@@ -91,8 +91,8 @@ function UserRegister() {
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-gray-900">
-      <div className="max-w-lg w-3/12 mx-auto p-8 rounded-lg bg-gray-800 shadow-lg">
-        <h1 className="font-bold text-3xl text-cyan-600 text-center my-20 italic">
+      <div className="max-w-md w-full mx-4 p-6 rounded-lg bg-gray-800 shadow-lg">
+        <h1 className="font-bold md:text-3xl text-cyan-600 text-center mt-4 mb-10 italic">
           REGISTER USER
         </h1>
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
@@ -101,9 +101,9 @@ function UserRegister() {
             type="text"
             id="name"
             placeholder="Name"
-            className={`bg-gray-700 text-gray-100 p-4 rounded-lg shadow-inner focus:outline-none ${
+            className={`bg-gray-700 text-gray-100 p-2 md:p-3 rounded-lg shadow-inner focus:outline-none ${
               errors.name && "border-red-500"
-            }`}
+            } sm:w-full `}
             onChange={handleChange}
           />
           {errors.name && <span className="text-red-500">{errors.name}</span>}
@@ -111,9 +111,9 @@ function UserRegister() {
             type="email"
             id="email"
             placeholder="Email"
-            className={`bg-gray-700 text-gray-100 p-4 rounded-lg shadow-inner focus:outline-none ${
+            className={`bg-gray-700 text-gray-100 p-2 md:p-3 rounded-lg shadow-inner focus:outline-none ${
               errors.email && "border-red-500"
-            }`}
+            } sm:w-full `}
             onChange={handleChange}
           />
           {errors.email && <span className="text-red-500">{errors.email}</span>}
@@ -121,9 +121,9 @@ function UserRegister() {
             type="password"
             id="password"
             placeholder="Password"
-            className={`bg-gray-700 text-gray-100 p-4 rounded-lg shadow-inner focus:outline-none ${
+            className={`bg-gray-700 text-gray-100 p-2 md:p-3 rounded-lg shadow-inner focus:outline-none ${
               errors.password && "border-red-500"
-            }`}
+            } sm:w-full `}
             onChange={handleChange}
           />
           {errors.password && (
@@ -131,7 +131,7 @@ function UserRegister() {
           )}
           <button
             type="submit"
-            className="bg-indigo-600 text-white p-4 rounded-lg shadow-md hover:bg-indigo-900 focus:outline-none mt-4 font-bold"
+            className="bg-indigo-600 text-white p-2 md:p-3 rounded-lg shadow-md hover:bg-indigo-900 focus:outline-none mt-4 font-bold"
           >
             REGISTER
           </button>
